@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 100;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  margin-right: auto;
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+
+.intro {
+  height: 100vh;
+  background-image: url(https://media.istockphoto.com/id/1325997570/photo/bengal-cat-lying-on-sofa-and-smiling.jpg?s=612x612&w=0&k=20&c=U6HBa06jHDDZ4Wbd1GylTEybkvUCUaMf7blxCr-bon0=); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: dark overlay for better text visibility */
+  z-index: -1;
+}
+
+.intro-content {
+  z-index: 2;
+}
+
+
+.intro, .skills-section, .portfolio, .contact {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.about-col {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-col:hover {
+  transform: translateY(-5px);
+}
+
+.about-col h3 {
+  color: #ff66c4;
+  margin-bottom: 1rem;
+}
+
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+ 
+
+
+.heading-bg {
+  background: url('your-background.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.typewriter-name {
+  font-size: 2.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  margin: 0 auto;
+  animation: typing-name 4s steps(35) 1s forwards, blink-caret 0.7s step-end infinite;
+  border-right: 2px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+@keyframes typing-name {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.highlight {
+  color: #ff6b6b;
+}
+
+.bio {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.skills-wrap {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill svg {
+  width: 100px;
+  height: 100px;
+}
+
+.skill circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: #444;
+}
+
+.skill .progress {
+  stroke: #ff6b6b;
+  stroke-dasharray: 282;
+  stroke-dashoffset: calc(282 - (282 * var(--percent)) / 100);
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+
+.skill text {
+  fill: #eee;
+  font-size: 0.7rem;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contact {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+
+.glow-button {
+  background: linear-gradient(45deg, #ff6b6b, #ff4c4c);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 107, 107, 0.9);
+}
+
+.subheading {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #111;
+  color: #ccc;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
