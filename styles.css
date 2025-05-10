@@ -148,16 +148,16 @@ header {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  width: 0;
+  width: 0ch;
   margin: 0 auto;
-  animation: typing-name 4s steps(35) 1s forwards, blink-caret 0.7s step-end infinite;
+  animation: typing-name 4s steps(26) 1s forwards, blink-caret 0.7s step-end infinite;
   border-right: 2px solid #ff6b6b;
   color: #ff6b6b;
 }
 
 @keyframes typing-name {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0ch; }
+  to { width: 26ch; }
 }
 
 @keyframes blink-caret {
@@ -318,9 +318,10 @@ header {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .animated-heading {
-    font-size: 1.8rem;
+@media (max-width: 600px) {
+  .typewriter-name {
+    font-size: 1.6rem;
+    animation: typing-name-sm 4s steps(26) 1s forwards, blink-caret 0.7s step-end infinite;
   }
 
   .navbar {
