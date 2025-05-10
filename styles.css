@@ -22,6 +22,18 @@ body {
   z-index: 1000;
 }
 
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+
+
 header {
   position: sticky;
   top: 0;
@@ -173,6 +185,11 @@ header {
   50% { border-color: transparent }
 }
 
+ @keyframes typing-name-sm {
+    from { width: 0ch; }
+    to { width: 34ch; }
+  }
+
 .highlight {
   color: #ff6b6b;
 }
@@ -318,11 +335,14 @@ header {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
+
+  @media (max-width: 600px) {
   .typewriter-name {
     font-size: 1.6rem;
     animation: typing-name-sm 4s steps(26) 1s forwards, blink-caret 0.7s step-end infinite;
   }
+
+
 
   .navbar {
     flex-direction: column;
@@ -338,4 +358,7 @@ header {
   font-size: 0.9rem;
   border-top: 1px solid #333;
 }
+
+
+
 
